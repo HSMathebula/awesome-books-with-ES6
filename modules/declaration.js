@@ -3,7 +3,7 @@ export const bookAuthor = document.getElementById('author');
 export const addBtn = document.getElementById('submit');
 export const bookList = document.getElementById('book-list');
 
-export const formLink = document.querySelector('.form-container');
+export const addLink = document.querySelector('.form-container');
 export const contactLink = document.querySelector('.contact-info');
 export const bookListLink = document.querySelector('.book-list');
 
