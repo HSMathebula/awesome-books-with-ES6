@@ -9,33 +9,45 @@
   </head>
   <body>
 
-    <div class="main-container">
+    <section class="main-container">
       <header>
         <nav>
           <p class="logo">AwesomeBook</p>
           <ul>
             <li class="listBtn">List</li>
-            <li>Add new</li>
+            <li class="addBtn">Add new</li>
             <li class="contact">Contact</li>
           </ul>
         </nav>
       </header>
-      <div id="current-date"></div>
 
+      <span id="current-date">111</span>
       <h1>All Awesome books</h1>
-      <div id="book-list"></div>
+
+      <section id="book-list hide"></section>
       
-      <div class="form-contaner">
+      <section class="form-container">
         <hr class="hr">
         <p class="add-text">Add a new book</p>
         <form id="book-form">
           <input type="text" required placeholder="Title" id="title" /><br />
-          <input type="text" required placeholder="author" id="author" /><br />
-          <button id="add-button" type="submit">Add</button>
+          <input type="text" required placeholder="Author" id="author" /><br />
+          <button id="submit" type="submit">Add</button>
         </form>
-      </div>
-    </div>
+      </section>
 
-    <script src="index.js"></script>
+      <section class="contact-info hide">
+        <h2>Contact Information</h2>
+        <p>Do you have any questions or you just want to say "Hello"?<br>You can reach out to me.</p>
+        <p> e-mail: mail@mail.com</p>
+        <p> Phone Number: 00233444555666777</p>
+        <p> Address: Hse 277, conventry street, Luxembourg</p>
+       </section>
+    </section>
+
+    <footer>
+        <h3> © Copyright Happen </h3>
+    </footer>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
