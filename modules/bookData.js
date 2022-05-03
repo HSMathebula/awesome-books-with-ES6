@@ -1,7 +1,6 @@
 import { bookTitle, bookAuthor, bookList } from './declaration.js';
 
-export let StoredBooks;
-StoredBooks = JSON.parse(localStorage.getItem('book')) || [];
+export let StoredBooks = JSON.parse(localStorage.getItem('book')) || []; // eslint-disable-line
 
 // clear inputs
 export const clearData = () => {
