@@ -1,9 +1,9 @@
-import { bookList } from './bookData.js';
+import { StoredBooks } from './bookData.js';
 
 export default class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
-    this.id = bookList.length;
+    this.id = StoredBooks.length;
   }
 }

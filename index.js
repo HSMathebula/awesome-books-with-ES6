@@ -8,10 +8,12 @@ import {
 import * as luxon from './modules/luxon.js';
 
 addBtn.addEventListener('click', () => {
-  if (bookTitle.value.trim() !== '' && bookAuthor.value.trim() !== '') {
-    const myBookItem = new Book(bookTitle.value, bookAuthor.value);
-    BookData.bookList.push(myBookItem);
-    localStorage.setItem('book', JSON.stringify(BookData.bookList));
+  if (bookTitle.value.trim() !== ''
+  && bookAuthor.value.trim() !== '') {
+    const myBookItem = new Book(bookTitle.value,
+      bookAuthor.value);
+    BookData.StoredBooks.push(myBookItem);
+    localStorage.setItem('book', JSON.stringify(BookData.StoredBooks));
     BookData.clearData();
     BookData.displayBook();
     bookListLink.style.display = 'block';
@@ -27,26 +29,28 @@ window.addEventListener('load', () => {
   contactLink.style.display = 'none';
 });
 
-ctaList.addEventListener('load', () => {
+ctaList.addEventListener('click', () => {
   bookListLink.style.display = 'block';
   addLink.style.display = 'none';
   contactLink.style.display = 'none';
 });
 
-ctaAdd.addEventListener('load', () => {
+ctaAdd.addEventListener('click', () => {
   bookListLink.style.display = 'none';
   addLink.style.display = 'block';
   contactLink.style.display = 'none';
 });
 
-ctaContact.addEventListener('load', () => {
+ctaContact.addEventListener('click', () => {
   bookListLink.style.display = 'none';
   addLink.style.display = 'none';
   contactLink.style.display = 'block';
 });
 
 const displayTime = () => {
-  document.querySelector('#current-date').innerHTML = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_SHORT_WITH_SECONDS);
+  document.querySelector('#current-date')
+    .innerHTML = luxon.DateTime.now()
+      .toLocaleString(luxon.DateTime.DATETIME_SHORT_WITH_SECONDS);
   setTimeout(displayTime, 1000);
 };
 displayTime();

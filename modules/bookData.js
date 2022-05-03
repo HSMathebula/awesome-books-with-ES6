@@ -1,29 +1,29 @@
 import { bookTitle, bookAuthor, bookList } from './declaration.js';
 
-export let bookList = JSON.parse(localStorage.getItem('book')) || [];
+export let StoredBooks = JSON.parse(localStorage.getItem('book')) || [];
 
 // clear inputs
 export const clearData = () => {
-    bookTitle.value = '';
-    bookAuthor.value = '';
+  bookTitle.value = '';
+  bookAuthor.value = '';
 };
 
 // display books
 export const displayBook = () => {
-    bookSection.innerHTML = '';
-    for (let i = 0; i < bookList.length; i += 1) {
-      bookSection.innerHTML
+  bookList.innerHTML = '';
+  for (let i = 0; i < StoredBooks.length; i += 1) {
+    bookList.innerHTML
           += `
           <div id="bookSection">
-          <p> ${bookList[i].title}  </p>
-          <p> by </p>
-          <p>  ${bookList[i].author}</p>
-          <button class="deleteBtn" id="${bookList[i].id}">remove</button>
+          <p class="padding"> ${StoredBooks[i].title}</p>
+          <p class="padding">by  ${StoredBooks[i].author}</p>
+          <button class="deleteBtn" id="${StoredBooks[i].id}">
+          remove</button>
           </div>
         `;
-    }
+  }
 
-    document.querySelectorAll('.deleteBtn')
+  document.querySelectorAll('.deleteBtn')
     .forEach((btn) => {
       btn.addEventListener('click', () => {
         deleteData(btn.id); // eslint-disable-line
@@ -33,7 +33,7 @@ export const displayBook = () => {
 
 // delete function
 const deleteData = (id) => {
-    bookList = bookList.filter((books) => books.id !== +id);
-    localStorage.book = JSON.stringify(bookList);
-    displayBook();
+  StoredBooks = StoredBooks.filter((books) => books.id !== +id);
+  localStorage.book = JSON.stringify(StoredBooks);
+  displayBook();
 };
