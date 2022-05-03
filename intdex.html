@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome-books</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="main-container">
+      <header>
+        <nav>
+          <p class="logo">AwesomeBook</p>
+          <ul>
+            <li class="listBtn">List</li>
+            <li>Add new</li>
+            <li class="contact">Contact</li>
+          </ul>
+        </nav>
+      </header>
+      <div id="current-date"></div>
+
+      <h1>All Awesome books</h1>
+      <div id="book-list"></div>
+      
+      <div class="form-contaner">
+        <hr class="hr">
+        <p class="add-text">Add a new book</p>
+        <form id="book-form">
+          <input type="text" required placeholder="Title" id="title" /><br />
+          <input type="text" required placeholder="author" id="author" /><br />
+          <button id="add-button" type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
