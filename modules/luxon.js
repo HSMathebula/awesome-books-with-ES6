@@ -6,7 +6,8 @@
  * @private
  */
 
-class LuxonError extends Error {}
+// eslint-disable-line
+class LuxonError extends Error {}// eslint-disable-line
 
 /**
   * @private
