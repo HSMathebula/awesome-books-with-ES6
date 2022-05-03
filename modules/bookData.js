@@ -1,6 +1,7 @@
 import { bookTitle, bookAuthor, bookList } from './declaration.js';
 
-export let StoredBooks = JSON.parse(localStorage.getItem('book')) || [];
+export let StoredBooks;
+StoredBooks = JSON.parse(localStorage.getItem('book')) || [];
 
 // clear inputs
 export const clearData = () => {
