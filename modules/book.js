@@ -1,4 +1,4 @@
-import { bookList } from './DataBook.js';
+import { bookList } from './bookData.js';
 
 export default class Book {
   constructor(title, author) {
